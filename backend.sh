@@ -2,6 +2,11 @@
 
 #installs and runs backend of MEAN application
 
+set backend_runfile = "index.js"
+set backend_giturl="https://github.com/Nboaram/TeamAPoolProjectBackend.git"
+set backend_directory="TeamAPoolProjectBackend"
+set backend_branch="Developer"
+
 #create a backend user and make sure a home directory is created for it
 sudo useradd --create-home backend
 
