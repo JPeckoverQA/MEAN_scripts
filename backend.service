@@ -3,7 +3,7 @@ Description=backend of app
 After=network.target
 
 [Service]
-ExecStart=/home/backend/$(backend_directory) node $(backend_runfile)
+ExecStart=/home/backend/$backend_directory node $backend_runfile
 Restart=always
 User=backend
 # Use 'nogroup' group for Ubuntu/Debian

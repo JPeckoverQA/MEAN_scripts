@@ -2,11 +2,6 @@
 
 #installs and runs backend of MEAN application
 
-set backend_runfile = "index.js"
-set backend_giturl="https://github.com/Nboaram/TeamAPoolProjectBackend.git"
-set backend_directory="TeamAPoolProjectBackend"
-set backend_branch="Developer"
-
 #create a backend user and make sure a home directory is created for it
 sudo useradd --create-home backend
 
@@ -36,7 +31,7 @@ git checkout $backend_branch
 
 #give user permissions
 cd ..
-sudo chmod -R 777  $backend_directory
+sudo chmod -R 777 $backend_directory
 
 #install express in project directory
 cd $backend_directory

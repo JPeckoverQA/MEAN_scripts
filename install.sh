@@ -2,9 +2,15 @@
 
 #installs MEAN stack and launches a project
 
-set frontend_giturl="https://github.com/Nboaram/TeamAPoolProjectUI.git"
-setfrontend_directory="TeamAPoolProjectUI"
-set frontend_branch="Developer"
+
+export backend_runfile=index.js
+export backend_giturl=https://github.com/Nboaram/TeamAPoolProjectBackend.git
+export backend_directory=TeamAPoolProjectBackend
+export backend_branch=Developer
+
+export frontend_giturl=https://github.com/Nboaram/TeamAPoolProjectUI.git
+export frontend_directory=TeamAPoolProjectUI
+export frontend_branch=Developer
 
 #update
 sudo apt update
