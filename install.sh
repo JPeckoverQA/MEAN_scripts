@@ -20,7 +20,7 @@ sudo apt-get install -y curl
 #install wget
 sudo apt install -y wget
 
-
+echo "launching backend"
 ./backend.sh
 
 
