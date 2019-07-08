@@ -12,14 +12,14 @@ sudo usermod --shell /bin/bash backend
 
 #install nodejs
 sudo su - backend -c curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo su - backend -c sudo apt-get install -y nodejs
+sudo su - backend -c apt-get install -y nodejs
 
 #install npm
-sudo su - backend -c sudo apt install -y npm
+sudo su - backend -c apt install -y npm
 
 #install mongodb
-sudo su - backend -c sudo apt install -y mongodb
-sudo su - backend -c sudo npm install -y mongoose
+sudo su - backend -c apt install -y mongodb
+sudo su - backend -c npm install -y mongoose
 
 #clone backend from git
 sudo su - backend -c git clone $backend_giturl
@@ -40,17 +40,17 @@ sudo su - backend -c npm install express --save
 sudo su - backend -c npm install
 
 #copy backend.service into systemd
-sudo su - backend -c sudo cp backend.service /etc/systemd/system/
+sudo su - backend -c cp backend.service /etc/systemd/system/
 
 #install the backend systemd service script
-sudo su - backend -c sudo systemctl daemon-reload
+sudo su - backend -c systemctl daemon-reload
 
 echo "Launching backend"
-sudo su - backend -c sudo systemctl start backend
+sudo su - backend -c systemctl start backend
 echo "Backend launched!"
 
 #allow backend to run on system startup
-sudo su - backend -c sudo systemctl enable backend
+sudo su - backend -c systemctl enable backend
 
 
 
