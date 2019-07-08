@@ -23,4 +23,6 @@ sudo apt install -y wget
 #install git
 apt-get install -y git-core
 
+./backend.sh
+
 
