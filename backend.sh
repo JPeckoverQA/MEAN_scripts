@@ -18,28 +18,28 @@ sudo su - backend
 
 #install nodejs
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -yg nodejs
+sudo apt-get install -y nodejs
 
 #install npm
-sudo apt install -yg npm
+sudo apt install -y npm
 
 #install mongodb
-sudo apt install -yg mongodb
-sudo npm install -yg mongoose
+sudo apt install -y mongodb
+sudo npm install -y mongoose
 
 #clone backend from git
-git clone $(backend_giturl)
+git clone $backend_giturl
 
 #switch to correct branch
-cd $(backend_directory)
-git checkout $(backend_branch)
+cd $backend_directory
+git checkout $backend_branch
 
 #give user permissions
 cd ..
-sudo chmod 777 -R $(backend_directory)
+sudo chmod -R 777  $backend_directory
 
 #install express in project directory
-cd $(backend_directory)
+cd $backend_directory
 npm install express --save
 
 #install npm
