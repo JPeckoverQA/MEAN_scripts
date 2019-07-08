@@ -15,12 +15,12 @@ frontend_branch="Developer"
 sudo apt update
 
 #install curl
-sudo apt-get install -yg curl
+sudo apt-get install -y curl
 
 #install wget
-sudo apt install -yg wget
+sudo apt install -y wget
 
 #install git
-apt-get install -yg git-core
+apt-get install -y git-core
 
 
