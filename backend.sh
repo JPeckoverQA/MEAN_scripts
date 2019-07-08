@@ -9,49 +9,48 @@ sudo useradd --create-home backend
 sudo usermod --shell /bin/bash backend
 
 #switching to backend user first ensures it is installed in backend home folder
-sudo su - backend
 
 #install nodejs
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo su - backend -c curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo su - backend -c sudo apt-get install -y nodejs
 
 #install npm
-sudo apt install -y npm
+sudo su - backend -c sudo apt install -y npm
 
 #install mongodb
-sudo apt install -y mongodb
-sudo npm install -y mongoose
+sudo su - backend -c sudo apt install -y mongodb
+sudo su - backend -c sudo npm install -y mongoose
 
 #clone backend from git
-git clone $backend_giturl
+sudo su - backend -c git clone $backend_giturl
 
 #switch to correct branch
-cd $backend_directory
-git checkout $backend_branch
+sudo su - backend -c cd $backend_directory
+sudo su - backend -c git checkout $backend_branch
 
 #give user permissions
-cd ..
-sudo chmod -R 777 $backend_directory
+sudo su - backend -c cd ..
+sudo su - backend -c sudo chmod -R 777 $backend_directory
 
 #install express in project directory
-cd $backend_directory
-npm install express --save
+sudo su - backend -c cd $backend_directory
+sudo su - backend -c npm install express --save
 
 #install npm
-npm install
+sudo su - backend -c npm install
 
 #copy backend.service into systemd
-sudo cp backend.service /etc/systemd/system/
+sudo su - backend -c sudo cp backend.service /etc/systemd/system/
 
 #install the backend systemd service script
-sudo systemctl daemon-reload
+sudo su - backend -c sudo systemctl daemon-reload
 
 echo "Launching backend"
-sudo systemctl start backend
+sudo su - backend -c sudo systemctl start backend
 echo "Backend launched!"
 
 #allow backend to run on system startup
-sudo systemctl enable backend
+sudo su - backend -c sudo systemctl enable backend
 
 
 
