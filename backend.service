@@ -1,14 +1,17 @@
 [Unit]
-Description=backend of app
+Description=backend node application
 After=network.target
 
 [Service]
 Type=simple
-ExecStart=node ~/$backend_directory/$backend_runfile
+ExecStart=/usr/bin/nodenode ~/$backend_directory/$backend_runfile
 Restart=on-failure
-RestartSec=10
 User=backend
-# Use 'nogroup' group for Ubuntu/Debian
-# use 'nobody' group for Fedora
+Group=nogroup
+Enviroment=PATH=/usr/bin:/usr/local/bin
+Enviroment=NODE_ENV=production
+Enviroment=NODE_PORT=8081
+
+
 [Install]
 WantedBy=multi-user.target
