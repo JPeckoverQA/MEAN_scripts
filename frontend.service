@@ -3,10 +3,10 @@
 Description=front end angular app
 
 [Service]
-ExecStart=/usr/bin/ng serve --host 0.0.0.0 ~/$frontend_directory/src
+ExecStart=/usr/bin/ng serve --host 0.0.0.0 ~/PoolManager/TeamAPoolProjectUI/src
 Restart=on-failure
 Type=simple
-WorkingDirectory=~/$frontend_directory/src
+WorkingDirectory=~/PoolManager/TeamAPoolProjectUI/src
 
 [Install]
 WantedBy=multi-user.target
