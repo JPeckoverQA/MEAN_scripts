@@ -1,5 +1,4 @@
 #!/bin/bash
-source install.sh
 
 #installs and runs frontend of MEAN application
 
@@ -11,7 +10,7 @@ ng --version
 
 #clone frontend from git
 echo "*****cloning frontend*****"
-cd ~/${project-name}
+cd ~/${project_name}
 sudo git clone $frontend_giturl
 
 #configure frontend service
@@ -20,7 +19,7 @@ sudo cp ~/Mean_scripts/frontend.service /etc/systemd/system/frontend.service
 
 #start frontend service
 echo "*****starting frontend service*****"
-cd ~/${project-name}/${frontend_directory}
+cd ~/${project_name}/${frontend_directory}
 sudo git checkout $frontend_branch
 sudo npm install -y
 

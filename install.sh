@@ -2,7 +2,7 @@
 
 #installs MEAN stack and launches a project
 
-export project-name=PoolManager
+export project_name=PoolManager
 
 export backend_giturl=https://github.com/Nboaram/TeamAPoolProjectBackend.git
 export backend_directory=TeamAPoolProjectBackend

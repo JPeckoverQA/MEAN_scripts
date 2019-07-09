@@ -1,5 +1,4 @@
 #!/bin/bash
-source install.sh
 
 #installs and runs backend of MEAN application
 
@@ -17,7 +16,7 @@ sudo service mongod start
 
 #clone backend from git
 echo "*****cloning backend*****"
-cd ~/${project-name}
+cd ~/${project_name}
 sudo git clone $backend_giturl
 
 
@@ -27,7 +26,7 @@ sudo cp ~/Mean_scripts/backend.service /etc/systemd/system/backend.service
 
 #start backend service
 echo "*****starting backend service*****"
-cd ~/${project-name}/${backend_directory}
+cd ~/${project_name}/${backend_directory}
 sudo git checkout $backend_branch
 sudo npm install -y
 
