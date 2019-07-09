@@ -6,8 +6,6 @@ After=network.target
 Type=simple
 ExecStart=/usr/bin/nodenode ~/$backend_directory/$backend_runfile
 Restart=on-failure
-User=backend
-Group=nogroup
 Enviroment=PATH=/usr/bin:/usr/local/bin
 Enviroment=NODE_ENV=production
 Enviroment=NODE_PORT=8081

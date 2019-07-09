@@ -22,7 +22,7 @@ sudo git clone $backend_giturl
 
 #configure backend service
 echo "*****configuring backend services*****"
-sudo cp ~/Mean_scripts/backend.service /etc/systemd/system/backend.service
+sudo cp ~/MEAN_scripts/backend.service /etc/systemd/system/backend.service
 
 #start backend service
 echo "*****starting backend service*****"

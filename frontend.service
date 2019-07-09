@@ -6,8 +6,6 @@ Description=front end angular app
 ExecStart=/usr/bin/ng serve --host 0.0.0.0 ~/$frontend_directory/src
 Restart=on-failure
 Type=simple
-User=frontend
-Group=nogroup
 WorkingDirectory=~/$frontend_directory/src
 
 [Install]

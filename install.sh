@@ -26,7 +26,7 @@ sudo apt install -y wget
 
 #create project directory
 echo "*****creating project directory*****"
-mkdir ~/${project-name}
+mkdir ~/${project_name}
 
 #install nodejs
 echo "*****installing nodejs*****"
