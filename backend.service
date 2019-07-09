@@ -3,13 +3,12 @@ Description=backend of app
 After=network.target
 
 [Service]
-ExecStart=/home/backend/$backend_directory node $backend_runfile
-Restart=always
+Type=simple
+ExecStart=node ~/$backend_directory/$backend_runfile
+Restart=on-failure
+RestartSec=10
 User=backend
 # Use 'nogroup' group for Ubuntu/Debian
 # use 'nobody' group for Fedora
-Environment=PATH=/usr/bin:/usr/local/bin
-Environment=NODE_ENV=production
-WorkingDirectory=/home/backend
 [Install]
 WantedBy=multi-user.target
