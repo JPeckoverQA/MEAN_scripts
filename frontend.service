@@ -3,7 +3,7 @@
 Description=front end angular app
 
 [Service]
-ExecStart=/usr/bin/ng serve --host 0.0.0.0 /home/johnny_peckover/PoolManager/TeamAPoolProjectUI/src
+ExecStart=/usr/bin/ng serve --host 0.0.0.0 syst/TeamAPoolProjectUI/src
 Restart=on-failure
 Type=simple
 WorkingDirectory=/home/johnny_peckover/PoolManager/TeamAPoolProjectUI/src
