@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/nodenode ~/PoolManager/TeamAPoolProjectBackend/Index.js
+ExecStart=/usr/bin/node /home/johnny_peckover/PoolManager/TeamAPoolProjectBackend/Index.js
 Restart=on-failure
 Enviroment=PATH=/usr/bin:/usr/local/bin
 Enviroment=NODE_ENV=production
