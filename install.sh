@@ -39,6 +39,6 @@ npm --version
 echo "*****launching backend*****"
 ./backend.sh
 
-echo"*****launching frontend*****"
+echo "*****launching frontend*****"
 ./frontend.sh
 
