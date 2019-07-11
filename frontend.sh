@@ -21,6 +21,7 @@ sudo cp ~/MEAN_scripts/frontend.service /etc/systemd/system/frontend.service
 echo "*****starting frontend service*****"
 #install angular 
 echo "*****installing angular*****"
+export NG_CLI_ANALYTICS=ci
 yes | sudo npm install -g @angular/cli
 ng --version
 cd ~/${project_name}/${frontend_directory}
