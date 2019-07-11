@@ -21,7 +21,7 @@ sudo cp ~/MEAN_scripts/frontend.service /etc/systemd/system/frontend.service
 echo "*****starting frontend service*****"
 cd ~/${project_name}/${frontend_directory}
 sudo git checkout $frontend_branch
-sudo npm install -y
+yes | sudo npm install
 
 sudo systemctl daemon-reload
 #allow frontend to run on system startup
