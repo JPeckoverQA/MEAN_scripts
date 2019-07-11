@@ -23,6 +23,7 @@ echo "*****starting frontend service*****"
 echo "*****installing angular*****"
 export NG_CLI_ANALYTICS=ci
 yes | sudo npm install -g @angular/cli
+ng analytics off
 ng --version
 cd ~/${project_name}/${frontend_directory}
 sudo git checkout $frontend_branch
