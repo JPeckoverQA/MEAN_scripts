@@ -24,7 +24,7 @@ echo "*****installing angular*****"
 cd ~/${project_name}/${frontend_directory}
 git checkout $frontend_branch
 export NG_CLI_ANALYTICS=false
-yes | npm install
+yes | sudo npm install -y
 yes | sudo npm install -g @angular/cli
 ng analytics off
 ng --version
