@@ -35,7 +35,7 @@ sudo apt-get install -y nodejs
 node --version
 yes | npm --version
 
-
+chmod +x *.sh
 echo "*****launching backend*****"
 ./backend.sh
 
