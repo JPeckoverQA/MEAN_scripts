@@ -19,7 +19,7 @@ echo "*****installing nodejs*****"
 sudo curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 sudo apt-get install -y nodejs
 node --version
-yes | npm --version
+yes | npm --version1
 
 
 #clone backend from git
