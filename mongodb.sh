@@ -12,4 +12,5 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
 
 echo "*****starting mongodb service*****"
-sudo service mongod start
+sudo systemctl daemon-reload
+sudo systemctl start mongodb
