@@ -34,9 +34,9 @@ sudo cp ~/MEAN_scripts/backend.service /etc/systemd/system/backend.service
 echo "*****starting backend service*****"
 cd ${backend_directory}
 sudo git checkout $backend_branch
-yes | sudo npm install
+yes | npm install
 
 sudo systemctl daemon-reload
 #allow backend to run on system startup
-sudo systemctl enable backend
-sudo systemctl start backend
+sudo systemctl enable api.service
+sudo systemctl start api.service

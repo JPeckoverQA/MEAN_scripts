@@ -1,5 +1,5 @@
 [Unit]
-Description=backend node application
+Description=api node application
 After=network.target
 
 [Service]
