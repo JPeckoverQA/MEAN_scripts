@@ -17,7 +17,7 @@ sudo service mongod start
 #clone backend from git
 echo "*****cloning backend*****"
 cd ~/${project_name}
-sudo git clone $backend_giturl
+git clone $backend_giturl
 
 
 #configure backend service
@@ -27,7 +27,7 @@ sudo cp ~/MEAN_scripts/backend.service /etc/systemd/system/backend.service
 #start backend service
 echo "*****starting backend service*****"
 cd ~/${project_name}/${backend_directory}
-sudo git checkout $backend_branch
+git checkout $backend_branch
 sudo npm install -y
 
 sudo systemctl daemon-reload
